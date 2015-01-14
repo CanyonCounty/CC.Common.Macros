@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC.Common.Macros", "CC.Common.Macros\CC.Common.Macros.csproj", "{EAD34517-4013-4383-A09F-7E20EDACD130}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC.Common.Macro.Demo", "CC.Common.Macro.Demo\CC.Common.Macro.Demo.csproj", "{AC34E44A-4D25-410D-AA9F-4DF0D98D8FF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAD34517-4013-4383-A09F-7E20EDACD130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD34517-4013-4383-A09F-7E20EDACD130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD34517-4013-4383-A09F-7E20EDACD130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD34517-4013-4383-A09F-7E20EDACD130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC34E44A-4D25-410D-AA9F-4DF0D98D8FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC34E44A-4D25-410D-AA9F-4DF0D98D8FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC34E44A-4D25-410D-AA9F-4DF0D98D8FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC34E44A-4D25-410D-AA9F-4DF0D98D8FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
