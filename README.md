@@ -95,3 +95,28 @@ It currently only uses public properties. If however, you need a property to be 
 And it will also be hidden from being used as a Macro.
 
 I was thinking about using something else, but I don't want to force a dependancy on this assembly.
+
+I've added a Formatter option now. So you can be a delagate for the changes, it's simple to use.
+
+```C#
+    private string FormatValue(string property, string value)
+    {
+      // Now I have a hook into what's being changed.
+      string ret = value;
+      if (property.Equals("Age")) {
+        int age = Int32.Parse(value);
+        ret = String.Format("{0:n0}", age);
+      }
+
+      return ret;
+    }
+
+  // Somewhere else
+  Replacer.Formatter = FormatValue;
+  demoClass.Age = 4200;
+  
+  // Age macro is now 4,200
+
+```
+
+Now, if there is an age that's greater than 999 it will be formatted with a digit grouping (a comma in my locale).

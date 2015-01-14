@@ -116,7 +116,7 @@ Click the update button to change the values, then click Replace.
       {
         Demo2 demo = (Demo2)demoClass;
         demo.Name = "Yosemite Sam";
-        demo.Age = 42;
+        demo.Age = 4200;
         demoClass = demo;
       }
       else
