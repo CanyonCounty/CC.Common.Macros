@@ -73,15 +73,25 @@ Age = 24
 Replacer allows you to set prefix and postfix values. They default to { and }
 
 ```
-      // These are the default
-      Replacer.MacroPrefix = "{";
-      Replacer.MacroPostfix = "}";
+// These are the default
+Replacer.MacroPrefix = "{";
+Replacer.MacroPostfix = "}";
 
-      // Windows Shell style
-      Replacer.MacroPrefix = "%";
-      Replacer.MacroPostfix = "%";
+// Windows Shell style
+Replacer.MacroPrefix = "%";
+Replacer.MacroPostfix = "%";
       
-      // PHP Style
-      Replacer.MacroPrefix = "$";
-      Replacer.MacroPostfix = "";
+// PHP Style
+Replacer.MacroPrefix = "$";
+Replacer.MacroPostfix = "";
 ```
+
+It currently only uses public properties. If however, you need a property to be public for application purposes, but don't want Macro substitution you can set the
+
+```
+[Browsable(false)] // in System.ComponentModel
+```
+
+And it will also be hidden from being used as a Macro.
+
+I was thinking about using something else, but I don't want to force a dependancy on this assembly.
