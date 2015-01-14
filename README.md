@@ -3,7 +3,7 @@ Simple Project that shows variable substitution
 
 Given an object like so
 
-```
+```C#
 class Demo2
   {
     private string _name = "Unknown";
@@ -56,7 +56,7 @@ Age = %Age%
 
 You call a method like so
 
-```
+```C#
 string text = Replacer.Replace(replaceText, demoClass);
 ```
 
@@ -72,7 +72,7 @@ Age = 24
 
 Replacer allows you to set prefix and postfix values. They default to { and }
 
-```
+```C#
 // These are the default
 Replacer.MacroPrefix = "{";
 Replacer.MacroPostfix = "}";
@@ -88,7 +88,7 @@ Replacer.MacroPostfix = "";
 
 It currently only uses public properties. If however, you need a property to be public for application purposes, but don't want Macro substitution you can set the
 
-```
+```C#
 [Browsable(false)] // in System.ComponentModel
 ```
 
