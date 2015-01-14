@@ -11,6 +11,7 @@ namespace CC.Common.Macros
   {
     public static string MacroPrefix = "{";
     public static string MacroPostfix = "}";
+    public static ReplacerFormatterDelegate Formatter;
 
     protected static bool MacroProperty(PropertyInfo prop)
     {
@@ -47,7 +48,12 @@ namespace CC.Common.Macros
       {
         string value = prop.GetValue(objValues, null).ToString();
         if (MacroProperty(prop))
-          ret = ret.Replace(MacroPrefix + prop.Name + MacroPostfix, value);
+        {
+          if (Formatter != null)
+            ret = ret.Replace(MacroPrefix + prop.Name + MacroPostfix, Formatter(prop.Name, value));
+          else
+            ret = ret.Replace(MacroPrefix + prop.Name + MacroPostfix, value);
+        }
       }
       return ret;
     }

@@ -21,8 +21,22 @@ namespace CC.Common.Macro.Demo
       InitializeComponent();
     }
 
+    private string FormatValue(string property, string value)
+    {
+      // Now I have a hook into what's being changed.
+      string ret = value;
+      if (property.Equals("Age")) {
+        int age = Int32.Parse(value);
+        ret = String.Format("{0:n0}", age);
+      }
+
+      return ret;
+    }
+
     private void LoadDemo1()
     {
+      Replacer.Formatter = FormatValue;
+
       demoClass = new Demo1();
       lbMacros.Items.Clear();
       // These are the default, and you don't need to set them, unless you change them, like I did below.
