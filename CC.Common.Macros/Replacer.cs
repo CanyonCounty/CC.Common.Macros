@@ -44,6 +44,21 @@ namespace CC.Common.Macros
     {
       string ret = text;
       PropertyInfo[] props = objValues.GetType().GetProperties();
+
+      // Handle DEMO or EXAMPLE macro
+      string demo = String.Empty;
+      foreach (string macro in MacroNames(objValues))
+      {
+        string justName = macro;
+        if (MacroPrefix != "")
+          justName = justName.Replace(MacroPrefix, "");
+        if (MacroPostfix != "")
+          justName = justName.Replace(MacroPostfix, "");
+        demo += String.Format("{0} = {1}", justName, macro) + Environment.NewLine;
+      }
+
+      ret = ret.Replace(MacroPrefix + "DEMO" + MacroPostfix, demo);
+
       foreach (PropertyInfo prop in props)
       {
         string value = prop.GetValue(objValues, null).ToString();
