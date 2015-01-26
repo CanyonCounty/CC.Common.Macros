@@ -74,7 +74,8 @@
       this.cboDemo.Items.AddRange(new object[] {
             "demo1",
             "demo2",
-            "demo3"});
+            "demo3",
+            "demo4"});
       this.cboDemo.Location = new System.Drawing.Point(12, 12);
       this.cboDemo.Name = "cboDemo";
       this.cboDemo.Size = new System.Drawing.Size(161, 21);

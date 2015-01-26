@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Demo1.cs" />
     <Compile Include="Demo2.cs" />
+    <Compile Include="Demo4.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>

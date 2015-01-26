@@ -90,6 +90,22 @@ Click the update button to change the values, then click Replace.
       replaceText = txtText.Text;
     }
 
+    private void LoadDemo4()
+    {
+      demoClass = new Demo4();
+      lbMacros.Items.Clear();
+      Replacer.MacroPrefix = "$";
+      Replacer.MacroPostfix = "";
+      lbMacros.Items.AddRange(Replacer.MacroNames(demoClass).ToArray());
+      txtText.Text = @"This is another test. This just dumps all the possible variables and values
+
+The current values are
+$DEMO
+
+";
+      replaceText = txtText.Text;
+    }
+
     private void frmMain_Load(object sender, EventArgs e)
     {
       cboDemo.SelectedIndex = 0;
@@ -102,6 +118,7 @@ Click the update button to change the values, then click Replace.
         case 0: LoadDemo1(); break;
         case 1: LoadDemo2(); break;
         case 2: LoadDemo3(); break;
+        case 3: LoadDemo4(); break;
       }
     }
 
